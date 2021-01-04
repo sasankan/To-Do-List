@@ -1,0 +1,54 @@
+$default-font-color: black;
+$container-backround-color:#cccccc;
+$container-border-color:black;
+$textbox-border-color: rgb(92, 91, 91);
+$button-text-color:#fff;
+$add-button-color:#4caf50;
+$clear_button_color:#9f6060;
+$dark:#333;
+$light: #fff;
+
+@mixin mq($size) {
+   @media only screen and (min-width:$size){
+       @content;
+   } 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Redressed', cursive;
+}
+
+html,body{
+    font-size: 16px;
+    color: $default-font-color;
+    width: 100%;
+    @include mq(768px){
+        font-size: 22px;
+    }
+}
+
+body{
+    padding: 30px;
+    background-image: url(./images/Ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    transition: all 0.15s ease-out;
+
+    &.dark-theme {
+        background-image: url(./images/Space.jpg);
+    }
+}
+
+section{
+    background-color: $container-backround-color;
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    border: 1px solid $container-border-color;
+    border-radius: 5px;
+}

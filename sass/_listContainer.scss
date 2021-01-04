@@ -1,0 +1,102 @@
+.listContainer{
+    min-height: 60vh;
+    padding:0.75rem;
+
+    .listTitle{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        button{
+            font-size: 1rem;
+            background-color: $clear_button_color;
+            padding: 0 0.1rem;
+            margin-bottom: .3rem;
+            @include mq(768px){
+                padding: 0 0.5rem;
+            }
+        }
+
+        hr{
+            width: 100%;
+        }
+    }
+    
+    .item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .8rem;
+
+        input[type="checkbox"]{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        
+     
+            & + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0;
+            }
+            
+            & + label:before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: text-top;
+                width: 28px;
+                height: 28px;
+                background: white;
+            }
+            
+            &:hover + label:before {
+                background: #31af3b;
+            }
+            
+            &:focus + label:before {
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+            }
+            
+            &:checked + label:before {
+                background: #29f355;
+            }
+            
+            &:disabled + label {
+                color: #b8b8b8;
+                cursor: auto;
+            }
+            
+            &:disabled + label:before {
+                box-shadow: none;
+                background: #ddd;
+            }
+            
+            &:checked + label:after {
+                content: '';
+                position: absolute;
+                padding-top: 2px;
+                left: 7px;
+                top: 12px;
+                background: white;
+                width: 3px;
+                height: 2px;
+                box-shadow: 
+                2px 0 0 white,
+                4px 0 0 white,
+                4px -2px 0 white,
+                4px -4px 0 white,
+                4px -6px 0 white,
+                4px -8px 0 white;
+                transform: rotate(45deg);
+               
+            }
+        
+        }
+    }    
+
+    .confirmation{
+       position: absolute;
+       font-size: 20px;
+    }
+}

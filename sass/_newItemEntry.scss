@@ -1,0 +1,56 @@
+.newItemEntry{
+    position: sticky;
+    top:0;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+
+    form{
+        display: flex;
+        justify-content: space-between;
+        max-height: 60px;
+
+        label{
+            position: absolute;
+            left: -10000px;
+    }
+
+        input[type="text"]{
+            width: 68%;
+            font-size: 1rem;
+            border: 2px solid $textbox-border-color;
+            border-radius: 5px;
+            padding: 0.75rem;
+            outline: none;
+
+            &:focus,&:hover{
+                box-shadow: 3px 1px 4px black;
+                filter: brightness(120%);
+            }
+        }
+
+        #addItem{
+            background-color: $add-button-color;
+            padding: 0;
+            max-width: 85px;
+            max-height: 60px;
+            @include mq(768px){
+                font-size: 1.5rem;
+            }
+        
+        }
+        
+        #change-theme-btn{
+            background-color: blueviolet;
+            padding: 0;
+            max-width: 85px;
+            max-height: 60px;
+
+            & .material-icons{
+                @include mq(768px){
+                    font-size: 55px;
+                }
+                color: black;
+            }    
+        }    
+    }
+}

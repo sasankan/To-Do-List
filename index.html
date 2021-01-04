@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="sass/styles.css"/>
+    <script src="./js/main.js" type="module"></script>
+    <title tabindex="0">TO DO LIST</title>
+</head>
+<body>
+    <main>
+        <section class="newItemEntry">
+            <form id="itemEntryForm">
+                <label for="newItem">Entre a new to do item</label>
+                <input id="newItem" type="text" autocomplete="on" placeholder="Add Item" tabindex="0"/>
+                <button id="addItem" class="button" title="Add new item" aria-label="Add new item to the list">+</button>
+                <button id="change-theme-btn" class="button" title="Theme toggler" aria-label="Dark/Light mode">
+                    <i class="material-icons">mood</i>
+                </button>
+            </form>
+        </section>
+        <section class="listContainer">
+            <div class="listTitle">
+                <h1>TO DO LIST</h1>
+                <button id="clearItems" class="button" title="Clear the list" aria-label="Remove all the items from the list" tabindex="0">Clear</button>
+            </div>
+            <hr>
+            <div id="listItems">
+                <!--\<div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">Eat lunch today</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="2" tabindex="0">
+                    <label for="2">Sleep</label>
+                </div>-->
+            </div>
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+        </section>
+    </main>
+</body>
+</html>
